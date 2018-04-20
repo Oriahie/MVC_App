@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Chuks.Controllers
 {
@@ -15,13 +11,24 @@ namespace Chuks.Controllers
         
         public ActionResult Index()
         {
-            if (Request.IsAuthenticated)
-            {
-                return View();
-            }
-           else
-                return Redirect("http://localhost:53812/LoginAuth/Login");
+
+            return View();
+
+           // if (Request.IsAuthenticated)
+           // {
+                
+           // }
+           //else
+           //     return Redirect("http://localhost:53812/LoginAuth/Login");
             
         }
+
+        public ActionResult Chart()
+        {
+            return View();
+        }
+
+
+
     }
 }

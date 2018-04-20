@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "Rolins Academy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div class="sh-mainpanel">
+        <div class="sh-breadcrumb">
+            <nav class="breadcrumb">
+                <a class="breadcrumb-item" href="@Url.Action("Index","Home")">Rolins</a>
+                <a class="breadcrumb-item" href="">Charts</a>
+                <span class="breadcrumb-item active">ChartJS Chart</span>
+            </nav>
+        </div><!-- sh-breadcrumb -->
+        <div class="sh-pagetitle">
+            <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search">
+                <span class="input-group-btn">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </span><!-- input-group-btn -->
+            </div><!-- input-group -->
+            <div class="sh-pagetitle-left">
+                <div class="sh-pagetitle-icon"><i class="icon ion-ios-analytics"></i></div>
+                <div class="sh-pagetitle-title">
+                    <span>Graphs &amp; Charts</span>
+                    <h2>ChartJS Chart</h2>
+                </div><!-- sh-pagetitle-left-title -->
+            </div><!-- sh-pagetitle-left -->
+        </div><!-- sh-pagetitle -->
+        
+
+        <div class="sh-pagebody">
+
+            <div class="row row-sm">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartBar1" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Multiple Color Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartBar2" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="row row-sm mg-t-20">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Horizontal Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartBar3" height="200"></canvas>
+                        </div><!-- card-bod -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Horizontal Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartBar4" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="row row-sm mg-t-20">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Stacked Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartStacked1" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Stacked Bar Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A bar chart or bar graph is a chart with rectangular bars with lengths proportional to the values that they represent.</p>
+                            <canvas id="chartStacked2" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="row row-sm mg-t-20">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Line Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A line graph is a type of chart which displays information as a series of data points connected by straight line segments.</p>
+                            <canvas id="chartLine1" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Line Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A line graph is a type of chart which displays information as a series of data points connected by straight line segments.</p>
+                            <canvas id="chartLine2" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="row row-sm mg-t-20">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Area Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">An area chart or area graph displays graphically quantitative data. It is based on the line chart.</p>
+                            <canvas id="chartArea1" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Area Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">An area chart or area graph displays graphically quantitative data. It is based on the line chart.</p>
+                            <canvas id="chartArea2" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+            <div class="row row-sm mg-t-20">
+                <div class="col-xl-6">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Pie Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A pie chart (or a circle chart) is a circular statistical graphic which is divided into slices to illustrate numerical proportion.</p>
+                            <canvas id="chartPie" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+                <div class="col-xl-6 mg-t-25 mg-xl-t-0">
+                    <div class="card bd-primary">
+                        <div class="card-header bg-primary tx-white">Donut Chart</div>
+                        <div class="card-body pd-sm-30">
+                            <p class="mg-b-20 mg-sm-b-30">A pie chart (or a circle chart) is a circular statistical graphic which is divided into slices to illustrate numerical proportion.</p>
+                            <canvas id="chartDonut" height="200"></canvas>
+                        </div><!-- card-body -->
+                    </div><!-- card -->
+                </div><!-- col-6 -->
+            </div><!-- row -->
+
+        </div><!-- sh-pagebody -->
+        <div class="sh-footer">
+            <div>Copyright &copy; @DateTime.Now.Year. All Rights Reserved. Rolins Montessori Academy</div>
+
+            <div class="mg-t-10 mg-md-t-0">
+                Designed by:<a class="btn btn-primary btn-icon rounded-circle mg-r-5 mg-b-10" href="https://www.facebook.com/emmanuel.oriahi.71"><div><i class="fa fa-facebook"></i></div></a>
+                <i>emChristos</i>
+            </div><!-- sh-footer -->
+        </div><!-- sh-mainpanel -->
+        </div>
+
+
+
+

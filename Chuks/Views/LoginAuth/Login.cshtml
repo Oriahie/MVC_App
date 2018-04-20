@@ -1,77 +1,39 @@
-﻿
+﻿@model Chuks.Models.LoginInfo
 @{
     ViewBag.Title = "Login";
-    Layout = null;
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
 }
+<div>
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url(../../Content/img/bg5.jpg);">
 
-
-
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!--fav icon-->
-    <link rel="shortcut icon" href="~/Content/img/a.jpg" />
-
-    <!-- Twitter -->
-    <meta name="twitter:site" content="themepixels">
-    <meta name="twitter:creator" content="themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RMA Records">
-    <meta name="twitter:description" content="Rolins Montessori Academy Records">
-    <meta name="twitter:image" content="https://www.facebook.com/RolinsAcademy/photos/a.425295134511581.1073741827.424829361224825/425295137844914/?type=1&theater">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="https://www.facebook.com/RolinsAcademy/">
-    <meta property="og:title" content="RMA Records">
-    <meta property="og:description" content="Rolins Montessori Academy Financial Records">
-
-    <meta property="og:image" content="https://www.facebook.com/RolinsAcademy/photos/a.425295134511581.1073741827.424829361224825/425295137844914/?type=1&theater">
-    <meta property="og:image:secure_url" content="https://www.facebook.com/RolinsAcademy/photos/a.425295134511581.1073741827.424829361224825/425295137844914/?type=1&theater">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-
-    <!-- Meta -->
-    <meta name="description" content="Rolins Montessori Academy Financial Records">
-    <meta name="author" content="Oriahi Emmanuel">
+        <div class="signpanel-wrapper">
+            <div class="signbox">
+                <div class="signbox-header">
+                    <h2>Rolins Academy</h2>
+                    <p class="mg-b-0">Log in Page</p>
+                </div><!-- signbox-header -->
 
 
 
 
 
-    <!-- Vendor css -->
-    <link href="~/Content/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="~/Content/lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="~/Content/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+                @Html.ValidationSummary(false)
 
-    <!-- Shamcey CSS -->
-    <link rel="stylesheet" href="~/Content/css/shamcey.css">
-</head>
+                @using (Html.BeginForm("Login", "LoginAuth", new { returnUrl = Request.QueryString["returnUrl"] }))
 
-<body class="bg-gray-900">
+                {   <div class="signbox-body">
+                <div class="form-group">
+                    <label class="form-control-label">Email:</label>
+                    <input type="email" name="Username" placeholder="Enter your email" id="Username" class="form-control">
+                </div><!-- form-group -->
 
-    <div class="signpanel-wrapper">
-        <div class="signbox">
-            <div class="signbox-header">
-                <h2>Rolins Academy</h2>
-                <p class="mg-b-0">Log in Page</p>
-            </div><!-- signbox-header -->
-            <div class="signbox-body">
-                 <div class="form-group">
-            <label class="form-control-label">Email:</label>
-            <input type="email" name="email" placeholder="Enter your email" class="form-control">
-        </div><!-- form-group -->
-               
+
 
 
                 <div class="form-group">
                     <label class="form-control-label">Password:</label>
-                    <input type="password" name="password" placeholder="Enter your password" class="form-control">
+                    <input type="password" name="Password" placeholder="Enter your password" class="form-control">
+
 
 
 
@@ -79,17 +41,29 @@
                 <div class="form-group">
                     <a href="">Forgot password?</a>
                 </div><!-- form-group -->
-                <button class="btn btn-success btn-block">Sign In</button>
-                <div class="tx-center bg-white bd pd-10 mg-t-40">Not yet a member? <a href="">Create an account</a></div>
+                <button type="submit" class="btn btn-success btn-block">Sign In</button>
+
+                <div class="tx-center bg-white bd pd-10 mg-t-40">Not yet a member? <a href="@Url.Action("Signup", "LoginAuth")">Create an account</a></div>
+                <hr />
+
+                <div class="row mg-btm">
+                    <div class="col-md-12">
+                        <a href="" class="btn btn-primary btn-block">
+                            <i class="icon-facebook"></i>Login with Facebook
+                        </a>
+                    </div>
+
+                </div>
+            </div> }
 
 
-            </div><!-- signbox-body -->
-        </div><!-- signbox -->
-    </div><!-- signpanel-wrapper -->
 
-    <script src="~Content/lib/jquery/jquery.js"></script>
-    <script src="~Content/lib/popper.js/popper.js"></script>
-    <script src="~Content/lib/bootstrap/bootstrap.js"></script>
-    <script src="~Content/js/shamcey.js"></script>
-</body>
+
+
+            </div>
+                </div><!-- signbox-body -->
+            </div><!-- signbox -->
+        </div><!-- signpanel-wrapper -->
+    
+
 
